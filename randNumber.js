@@ -25,6 +25,9 @@ function randBits(N){
 	return ret;
 }
 function randomNumber(n){
+	if(n >= 1000000 || n <= 0){
+		throw "n must be > 0 and < 1000000";
+	}
 	let ret;
 	let pow = findPow(n);
 	while(1){
